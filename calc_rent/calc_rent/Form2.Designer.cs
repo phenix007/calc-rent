@@ -94,6 +94,11 @@
             // areanum
             // 
             this.areanum.Location = new System.Drawing.Point(74, 145);
+            this.areanum.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.areanum.Name = "areanum";
             this.areanum.Size = new System.Drawing.Size(61, 20);
             this.areanum.TabIndex = 1;
@@ -101,6 +106,11 @@
             // hnum
             // 
             this.hnum.Location = new System.Drawing.Point(74, 171);
+            this.hnum.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.hnum.Name = "hnum";
             this.hnum.Size = new System.Drawing.Size(61, 20);
             this.hnum.TabIndex = 1;
@@ -108,6 +118,11 @@
             // floornum
             // 
             this.floornum.Location = new System.Drawing.Point(74, 197);
+            this.floornum.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.floornum.Name = "floornum";
             this.floornum.Size = new System.Drawing.Size(61, 20);
             this.floornum.TabIndex = 1;
@@ -124,6 +139,11 @@
             // roomn
             // 
             this.roomn.Location = new System.Drawing.Point(74, 85);
+            this.roomn.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.roomn.Name = "roomn";
             this.roomn.Size = new System.Drawing.Size(61, 20);
             this.roomn.TabIndex = 1;
