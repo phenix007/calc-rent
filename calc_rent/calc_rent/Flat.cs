@@ -40,8 +40,11 @@ namespace calc_rent
              floor = 0;
 
          }
+         public float calcprice()
+         {
 
-       
+             return 0;
+         }       
 
     }
 }
