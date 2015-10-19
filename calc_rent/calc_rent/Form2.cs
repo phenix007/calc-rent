@@ -18,15 +18,8 @@ namespace calc_rent
         {
             InitializeComponent();
         }
-        public void getFlat(out Flat inf){
-            newflat = new Flat();
-            this.Show();
-            newflat = new Flat();
-            
-            while (!done)
-                Application.DoEvents();
-
-
+        void savef()
+        {
             newflat.number = (int)roomn.Value;
             newflat.area = (int)areanum.Value;
             newflat.inhabitants = (int)hnum.Value;
@@ -49,6 +42,17 @@ namespace calc_rent
             newflat.gas.metered = gasmeter.Checked;
             newflat.misc.price = float.Parse(miscnum.Text);
             newflat.cleanup.price = float.Parse(cleanupnum.Text);
+        }
+        public void getFlat(out Flat inf){
+            newflat = new Flat();
+            this.Show();
+            newflat = new Flat();
+            
+            while (!done)
+                Application.DoEvents();
+
+            savef();
+            
             if (save)
                 inf = newflat;
             else inf = new Flat();
@@ -84,6 +88,8 @@ namespace calc_rent
 
             while (!done)
                 Application.DoEvents();
+            if (save)
+                savef();
             this.Close();
         }
         private void Accept_Click(object sender, EventArgs e)

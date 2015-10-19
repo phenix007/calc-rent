@@ -33,6 +33,7 @@ namespace calc_rent
             this.Enabled = false;
             edit.editFlat(ref flat);
             this.Enabled = true;
+            this.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)
