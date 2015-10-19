@@ -1,0 +1,9 @@
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\bin\Debug\calc_rent.exe
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\bin\Debug\calc_rent.pdb
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\obj\Debug\calc_rent.csprojResolveAssemblyReference.cache
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\obj\Debug\calc_rent.Form1.resources
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\obj\Debug\calc_rent.Form2.resources
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\obj\Debug\calc_rent.Properties.Resources.resources
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\obj\Debug\calc_rent.csproj.GenerateResource.Cache
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\obj\Debug\calc_rent.exe
+C:\Users\Dima\Documents\GitHub\calc-rent\calc_rent\calc_rent\obj\Debug\calc_rent.pdb
