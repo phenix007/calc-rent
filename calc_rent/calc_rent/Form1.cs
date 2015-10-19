@@ -11,7 +11,7 @@ namespace calc_rent
 {
     public partial class Form1 : Form
     {
-        Flat newflat;
+        Flat flat;
         public Form1()
         {
             InitializeComponent();
@@ -20,10 +20,17 @@ namespace calc_rent
         private void новаяКвартираToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 _new = new Form2();
+          
+                _new.getFlat(out flat);
+        
             
-    _new.getFlat(out newflat);
-            
+        }
 
+        private void редактироватьСвваToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 _new = new Form2();
+            
+            _new.editFlat(ref flat);
         }
     }
 }

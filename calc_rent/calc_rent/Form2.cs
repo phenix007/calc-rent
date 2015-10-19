@@ -21,12 +21,22 @@ namespace calc_rent
             newflat = new Flat();
             this.Show();
             newflat = new Flat();
+            
+            while (!done)
+                Application.DoEvents();
             inf = newflat;
+            this.Dispose();
+        }
+        public void editFlat(ref Flat inf)
+        {
+           
+            this.Show();
+            newflat = inf;
+            elevc.Checked = true;
             while (!done)
                 Application.DoEvents();
             this.Dispose();
         }
-
         private void Accept_Click(object sender, EventArgs e)
         {
             done = true;
@@ -65,13 +75,13 @@ namespace calc_rent
 
         private void cleanupc_CheckedChanged(object sender, EventArgs e)
         {
-            cleanupc.Enabled = cleanupc.Checked;
+            cleanupnum.Enabled = cleanupc.Checked;
             newflat.cleanup.exists = cleanupc.Checked;
         }
 
         private void elevc_CheckedChanged(object sender, EventArgs e)
         {
-            elevc.Enabled = elevc.Checked;
+            elevnum.Enabled = elevc.Checked;
             newflat.elev.exists = elevc.Checked;
         }
 
@@ -150,6 +160,11 @@ namespace calc_rent
         private void cleanupnum_ValueChanged(object sender, EventArgs e)
         {
             newflat.cleanup.price = (int)cleanupnum.Value;
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
 
