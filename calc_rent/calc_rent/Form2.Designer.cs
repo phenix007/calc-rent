@@ -39,18 +39,13 @@
             this.renc = new System.Windows.Forms.CheckBox();
             this.cleanupc = new System.Windows.Forms.CheckBox();
             this.elevc = new System.Windows.Forms.CheckBox();
-            this.rennum = new System.Windows.Forms.NumericUpDown();
-            this.cleanupnum = new System.Windows.Forms.NumericUpDown();
-            this.elevnum = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.miscnum = new System.Windows.Forms.NumericUpDown();
             this.miscc = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.elec = new System.Windows.Forms.CheckBox();
             this.hotwater = new System.Windows.Forms.CheckBox();
             this.coldwater = new System.Windows.Forms.CheckBox();
             this.gas = new System.Windows.Forms.CheckBox();
-            this.heatnum = new System.Windows.Forms.NumericUpDown();
             this.heatc = new System.Windows.Forms.CheckBox();
             this.elecmeter = new System.Windows.Forms.CheckBox();
             this.hotwatermeter = new System.Windows.Forms.CheckBox();
@@ -58,15 +53,15 @@
             this.gasmeter = new System.Windows.Forms.CheckBox();
             this.Accept = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
+            this.rennum = new System.Windows.Forms.TextBox();
+            this.cleanupnum = new System.Windows.Forms.TextBox();
+            this.elevnum = new System.Windows.Forms.TextBox();
+            this.heatnum = new System.Windows.Forms.TextBox();
+            this.miscnum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.areanum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hnum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floornum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rennum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cleanupnum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elevnum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.miscnum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heatnum)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,7 +97,6 @@
             this.areanum.Name = "areanum";
             this.areanum.Size = new System.Drawing.Size(61, 20);
             this.areanum.TabIndex = 1;
-            this.areanum.ValueChanged += new System.EventHandler(this.areanum_ValueChanged);
             // 
             // hnum
             // 
@@ -110,7 +104,6 @@
             this.hnum.Name = "hnum";
             this.hnum.Size = new System.Drawing.Size(61, 20);
             this.hnum.TabIndex = 1;
-            this.hnum.ValueChanged += new System.EventHandler(this.hnum_ValueChanged);
             // 
             // floornum
             // 
@@ -118,7 +111,6 @@
             this.floornum.Name = "floornum";
             this.floornum.Size = new System.Drawing.Size(61, 20);
             this.floornum.TabIndex = 1;
-            this.floornum.ValueChanged += new System.EventHandler(this.floornum_ValueChanged);
             // 
             // label4
             // 
@@ -135,7 +127,6 @@
             this.roomn.Name = "roomn";
             this.roomn.Size = new System.Drawing.Size(61, 20);
             this.roomn.TabIndex = 1;
-            this.roomn.ValueChanged += new System.EventHandler(this.roomn_ValueChanged);
             // 
             // renc
             // 
@@ -170,33 +161,6 @@
             this.elevc.UseVisualStyleBackColor = true;
             this.elevc.CheckedChanged += new System.EventHandler(this.elevc_CheckedChanged);
             // 
-            // rennum
-            // 
-            this.rennum.Enabled = false;
-            this.rennum.Location = new System.Drawing.Point(160, 119);
-            this.rennum.Name = "rennum";
-            this.rennum.Size = new System.Drawing.Size(61, 20);
-            this.rennum.TabIndex = 1;
-            this.rennum.ValueChanged += new System.EventHandler(this.rennum_ValueChanged);
-            // 
-            // cleanupnum
-            // 
-            this.cleanupnum.Enabled = false;
-            this.cleanupnum.Location = new System.Drawing.Point(160, 145);
-            this.cleanupnum.Name = "cleanupnum";
-            this.cleanupnum.Size = new System.Drawing.Size(61, 20);
-            this.cleanupnum.TabIndex = 1;
-            this.cleanupnum.ValueChanged += new System.EventHandler(this.cleanupnum_ValueChanged);
-            // 
-            // elevnum
-            // 
-            this.elevnum.Enabled = false;
-            this.elevnum.Location = new System.Drawing.Point(160, 171);
-            this.elevnum.Name = "elevnum";
-            this.elevnum.Size = new System.Drawing.Size(61, 20);
-            this.elevnum.TabIndex = 1;
-            this.elevnum.ValueChanged += new System.EventHandler(this.elevnum_ValueChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -205,15 +169,6 @@
             this.label5.Size = new System.Drawing.Size(200, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Фиксированная ежемесячная оплата";
-            // 
-            // miscnum
-            // 
-            this.miscnum.Enabled = false;
-            this.miscnum.Location = new System.Drawing.Point(160, 223);
-            this.miscnum.Name = "miscnum";
-            this.miscnum.Size = new System.Drawing.Size(61, 20);
-            this.miscnum.TabIndex = 1;
-            this.miscnum.ValueChanged += new System.EventHandler(this.miscnum_ValueChanged);
             // 
             // miscc
             // 
@@ -244,7 +199,6 @@
             this.elec.TabIndex = 2;
             this.elec.Text = "Электричество";
             this.elec.UseVisualStyleBackColor = true;
-            this.elec.CheckedChanged += new System.EventHandler(this.elec_CheckedChanged);
             // 
             // hotwater
             // 
@@ -255,7 +209,6 @@
             this.hotwater.TabIndex = 2;
             this.hotwater.Text = "Горячая вода";
             this.hotwater.UseVisualStyleBackColor = true;
-            this.hotwater.CheckedChanged += new System.EventHandler(this.hotwater_CheckedChanged);
             // 
             // coldwater
             // 
@@ -266,7 +219,6 @@
             this.coldwater.TabIndex = 2;
             this.coldwater.Text = "Холодная вода";
             this.coldwater.UseVisualStyleBackColor = true;
-            this.coldwater.CheckedChanged += new System.EventHandler(this.coldwater_CheckedChanged);
             // 
             // gas
             // 
@@ -277,16 +229,6 @@
             this.gas.TabIndex = 2;
             this.gas.Text = "Газ";
             this.gas.UseVisualStyleBackColor = true;
-            this.gas.CheckedChanged += new System.EventHandler(this.gas_CheckedChanged);
-            // 
-            // heatnum
-            // 
-            this.heatnum.Enabled = false;
-            this.heatnum.Location = new System.Drawing.Point(160, 197);
-            this.heatnum.Name = "heatnum";
-            this.heatnum.Size = new System.Drawing.Size(61, 20);
-            this.heatnum.TabIndex = 1;
-            this.heatnum.ValueChanged += new System.EventHandler(this.heatnum_ValueChanged);
             // 
             // heatc
             // 
@@ -307,7 +249,6 @@
             this.elecmeter.Size = new System.Drawing.Size(15, 14);
             this.elecmeter.TabIndex = 3;
             this.elecmeter.UseVisualStyleBackColor = true;
-            this.elecmeter.CheckedChanged += new System.EventHandler(this.elecmeter_CheckedChanged);
             // 
             // hotwatermeter
             // 
@@ -317,7 +258,6 @@
             this.hotwatermeter.Size = new System.Drawing.Size(15, 14);
             this.hotwatermeter.TabIndex = 3;
             this.hotwatermeter.UseVisualStyleBackColor = true;
-            this.hotwatermeter.CheckedChanged += new System.EventHandler(this.hotwatermeter_CheckedChanged);
             // 
             // coldwatermeter
             // 
@@ -327,7 +267,6 @@
             this.coldwatermeter.Size = new System.Drawing.Size(15, 14);
             this.coldwatermeter.TabIndex = 3;
             this.coldwatermeter.UseVisualStyleBackColor = true;
-            this.coldwatermeter.CheckedChanged += new System.EventHandler(this.coldwatermeter_CheckedChanged);
             // 
             // gasmeter
             // 
@@ -337,7 +276,6 @@
             this.gasmeter.Size = new System.Drawing.Size(15, 14);
             this.gasmeter.TabIndex = 3;
             this.gasmeter.UseVisualStyleBackColor = true;
-            this.gasmeter.CheckedChanged += new System.EventHandler(this.gasmeter_CheckedChanged);
             // 
             // Accept
             // 
@@ -359,11 +297,61 @@
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
+            // rennum
+            // 
+            this.rennum.Enabled = false;
+            this.rennum.Location = new System.Drawing.Point(160, 116);
+            this.rennum.Name = "rennum";
+            this.rennum.Size = new System.Drawing.Size(61, 20);
+            this.rennum.TabIndex = 5;
+            this.rennum.Text = "0";
+            // 
+            // cleanupnum
+            // 
+            this.cleanupnum.Enabled = false;
+            this.cleanupnum.Location = new System.Drawing.Point(160, 142);
+            this.cleanupnum.Name = "cleanupnum";
+            this.cleanupnum.Size = new System.Drawing.Size(61, 20);
+            this.cleanupnum.TabIndex = 5;
+            this.cleanupnum.Text = "0";
+            // 
+            // elevnum
+            // 
+            this.elevnum.Enabled = false;
+            this.elevnum.Location = new System.Drawing.Point(160, 167);
+            this.elevnum.Name = "elevnum";
+            this.elevnum.Size = new System.Drawing.Size(61, 20);
+            this.elevnum.TabIndex = 5;
+            this.elevnum.Text = "0";
+            // 
+            // heatnum
+            // 
+            this.heatnum.Enabled = false;
+            this.heatnum.Location = new System.Drawing.Point(160, 193);
+            this.heatnum.Name = "heatnum";
+            this.heatnum.Size = new System.Drawing.Size(61, 20);
+            this.heatnum.TabIndex = 5;
+            this.heatnum.Text = "0";
+            // 
+            // miscnum
+            // 
+            this.miscnum.Enabled = false;
+            this.miscnum.Location = new System.Drawing.Point(160, 219);
+            this.miscnum.Name = "miscnum";
+            this.miscnum.Size = new System.Drawing.Size(61, 20);
+            this.miscnum.TabIndex = 5;
+            this.miscnum.Text = "0";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 351);
+            this.Controls.Add(this.cleanupnum);
+            this.Controls.Add(this.elevnum);
+            this.Controls.Add(this.heatnum);
+            this.Controls.Add(this.miscnum);
+            this.Controls.Add(this.rennum);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.Accept);
             this.Controls.Add(this.gasmeter);
@@ -379,14 +367,9 @@
             this.Controls.Add(this.cleanupc);
             this.Controls.Add(this.elec);
             this.Controls.Add(this.renc);
-            this.Controls.Add(this.miscnum);
-            this.Controls.Add(this.heatnum);
-            this.Controls.Add(this.elevnum);
             this.Controls.Add(this.floornum);
-            this.Controls.Add(this.cleanupnum);
             this.Controls.Add(this.hnum);
             this.Controls.Add(this.roomn);
-            this.Controls.Add(this.rennum);
             this.Controls.Add(this.areanum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
@@ -397,16 +380,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form2";
             this.Text = "Новая квартира";
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.areanum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hnum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.floornum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rennum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cleanupnum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elevnum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.miscnum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heatnum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,18 +402,13 @@
         private System.Windows.Forms.CheckBox renc;
         private System.Windows.Forms.CheckBox cleanupc;
         private System.Windows.Forms.CheckBox elevc;
-        private System.Windows.Forms.NumericUpDown rennum;
-        private System.Windows.Forms.NumericUpDown cleanupnum;
-        private System.Windows.Forms.NumericUpDown elevnum;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown miscnum;
         private System.Windows.Forms.CheckBox miscc;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox elec;
         private System.Windows.Forms.CheckBox hotwater;
         private System.Windows.Forms.CheckBox coldwater;
         private System.Windows.Forms.CheckBox gas;
-        private System.Windows.Forms.NumericUpDown heatnum;
         private System.Windows.Forms.CheckBox heatc;
         private System.Windows.Forms.CheckBox elecmeter;
         private System.Windows.Forms.CheckBox hotwatermeter;
@@ -444,5 +416,10 @@
         private System.Windows.Forms.CheckBox gasmeter;
         private System.Windows.Forms.Button Accept;
         private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.TextBox rennum;
+        private System.Windows.Forms.TextBox cleanupnum;
+        private System.Windows.Forms.TextBox elevnum;
+        private System.Windows.Forms.TextBox heatnum;
+        private System.Windows.Forms.TextBox miscnum;
     }
 }

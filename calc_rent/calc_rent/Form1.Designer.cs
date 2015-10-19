@@ -77,7 +77,6 @@
             // 
             // редактироватьСвваToolStripMenuItem
             // 
-            this.редактироватьСвваToolStripMenuItem.Enabled = false;
             this.редактироватьСвваToolStripMenuItem.Name = "редактироватьСвваToolStripMenuItem";
             this.редактироватьСвваToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.редактироватьСвваToolStripMenuItem.Text = "Редактировать св-ва";
@@ -110,6 +109,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Квартплата";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -20,17 +20,24 @@ namespace calc_rent
         private void новаяКвартираToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 _new = new Form2();
-          
+            this.Enabled = false;
                 _new.getFlat(out flat);
-        
+                this.Enabled = true;
+                this.Focus();
             
         }
 
         private void редактироватьСвваToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 _new = new Form2();
-            
-            _new.editFlat(ref flat);
+            Form2 edit = new Form2();
+            this.Enabled = false;
+            edit.editFlat(ref flat);
+            this.Enabled = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
