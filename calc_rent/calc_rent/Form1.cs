@@ -40,5 +40,35 @@ namespace calc_rent
         {
 
         }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                System.Xml.Serialization.XmlSerializer writer =
+                   new System.Xml.Serialization.XmlSerializer(flat.GetType());
+                System.IO.StreamWriter file =
+                   new System.IO.StreamWriter(sfd.FileName);
+
+                writer.Serialize(file, flat);
+                file.Close();
+            }
+            
+        }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Flat));
+
+                System.IO.StreamReader reader = new System.IO.StreamReader(ofd.FileName);
+                flat = (Flat)serializer.Deserialize(reader);
+                reader.Close();
+            }
+        }
     }
 }

@@ -137,7 +137,5 @@ namespace calc_rent
             save = false;
             done = true;
         }
-
-
     }
 }

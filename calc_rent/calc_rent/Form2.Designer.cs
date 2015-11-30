@@ -367,6 +367,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 351);
+            this.ControlBox = false;
             this.Controls.Add(this.cleanupnum);
             this.Controls.Add(this.elevnum);
             this.Controls.Add(this.heatnum);
@@ -397,7 +398,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form2";
             this.Text = "Новая квартира";
             ((System.ComponentModel.ISupportInitialize)(this.areanum)).EndInit();
